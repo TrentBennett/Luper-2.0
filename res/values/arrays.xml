@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Quarterly</item>
+        <item>6 Months</item>
+        <item>Yearly</item>
+   </string-array>
+   
+    <string-array name="category_color">
+        <item>#ffE30800</item>
+       <item>#FF126ECC</item>
+       <item>#FF42AD21</item>
+       <item>#ffFF8200</item>
+       <item>#ff871A5C</item>
+    </string-array>
+ 
+    <string-array name="action_click">
+        <item>Call</item>
+        <item>Text</item>
+        <item>Email</item>
+     
+    </string-array>
+    
+    <string-array name="action_click_without_email">
+        <item>Call</item>
+        <item>Text</item>
+        
+     
+    </string-array>
+    
+    <string-array name="action_click_email">
+        <item>Email</item>
+       
+    </string-array>
+    
+</resources>

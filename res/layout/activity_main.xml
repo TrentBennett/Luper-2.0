@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout_Main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    >
+  <!--   android:weightSum="100" -->	
+    <Button
+        android:id="@+id/BtnAppName"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="45sp"
+        android:background="@drawable/title_bkg"
+         >
+
+    </Button>
+    
+    <Button
+        android:id="@+id/BtnWeekly"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_marginBottom="1dp"
+		android:tag = "0"
+        android:background="@drawable/weekly_bkg"
+        android:gravity="center"
+        android:text="@string/weekly"
+        android:textColor="#fff"
+        android:textSize="40sp" >
+
+    </Button>
+    
+    <Button
+        android:id="@+id/BtnMonthly"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+
+        android:text="@string/monthly"
+		android:background="@drawable/monthly_bkg"
+        android:tag="1"
+        android:textColor="#fff"
+        android:textSize="40sp" >
+
+    </Button>
+    
+    <Button
+        android:id="@+id/BtnQuarterly"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="1dp"
+      
+        android:gravity="center"
+        android:text="@string/quarterly"
+        android:background="@drawable/quarterly_bkg"
+        android:tag="2"
+        android:textColor="#fff"
+        android:textSize="40sp" >
+
+    </Button>
+    
+    <Button
+        android:id="@+id/BtnHalfYear"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="1dp"
+      
+        android:gravity="center"
+        android:text="@string/halfyear"
+        android:background="@drawable/halfyear_bkg"
+       android:tag="3"
+        android:textColor="#fff"
+        android:textSize="40sp" >
+
+    </Button>
+    
+    <Button
+        android:id="@+id/BtnYearly"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+
+        android:text="@string/yearly"
+        android:background="@drawable/yearly_bkg"
+        android:tag="4"
+        android:textColor="#fff"
+        android:textSize="40sp" >
+
+    </Button>
+    
+
+</LinearLayout>

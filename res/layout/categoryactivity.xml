@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout_Main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000"
+    android:gravity="top"
+    android:orientation="vertical"
+
+    >
+  <!--   android:weightSum="100" -->
+  
+  <LinearLayout
+    android:id="@+id/LinearLayout_Bar"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="horizontal">
+      
+     	
+    	 <Button
+        android:id="@+id/btn_back"
+       
+        android:layout_width="40dp"
+        
+        android:layout_height="40dp"
+        
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="fitXY"
+        android:textColor="#fff"
+        android:textSize="45sp"
+        android:background="@drawable/back_button_bkg"
+        android:contentDescription="@string/back"
+         >
+
+    	</Button>
+    	
+    	    <TextView
+        android:id="@+id/btn_category_name"
+        android:layout_width="235dp"
+     
+        android:layout_height="fill_parent"
+        
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:text="@string/weekly"
+        android:textColor="#fff"
+        android:textSize="37sp"
+     
+         >
+
+    	</TextView>
+    	 <Button
+        android:id="@+id/btn_add"
+        
+        android:layout_width="40dp"
+        
+        android:layout_height="40dp"
+        
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:scaleType="fitXY"
+        android:textColor="#fff"
+        android:textSize="45sp"
+        android:contentDescription="@string/add"
+        android:background="@drawable/add_button_bkg"
+         >
+
+    	</Button>
+  </LinearLayout>	
+
+
+  <!--   <include android:id="@+id/head" layout="@layout/head_nab" /> -->
+    <ListView android:id="@+id/lv_alarms" android:layout_width="fill_parent" android:layout_height="0dp" android:layout_weight="1.0" />
+
+<TextView
+    android:id="@+id/empty"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="Add a Contact"
+    android:textSize="34dip"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:layout_gravity="center"
+     />
+
+</LinearLayout>
+
+
+

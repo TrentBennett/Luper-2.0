@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:id="@id/LinearLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+
+    android:background="@drawable/contact_unpressed_bkg"
+    android:descendantFocusability="blocksDescendants"
+    
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+    
+        android:singleLine="true"
+        
+        android:textColor="@color/white"
+        android:textSize="36.0sp"
+        android:textStyle="bold" />
+
+</LinearLayout> -->
+
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/save_button"
+
+
+        
+    android:layout_marginBottom="1dp" 
+    android:paddingBottom="10dip"
+    android:paddingTop="10dip"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/contact_bkg"
+    android:textColor="#fff"
+    android:focusable = "false"
+    android:textSize="30sp"
+ 	android:ellipsize="none"
+    />
+ 
