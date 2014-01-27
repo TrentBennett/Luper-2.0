@@ -121,7 +121,6 @@ public final class R {
         public static final int LinearLayout_Contact_Info=0x7f0b0008;
         public static final int LinearLayout_Main=0x7f0b001f;
         public static final int LinearLayout_Reminders=0x7f0b0013;
-        public static final int LinearLayout_Set_Start_Date=0x7f0b000d;
         public static final int Reminders_text=0x7f0b0012;
         public static final int TextView01=0x7f0b0001;
         public static final int TextViewUrl=0x7f0b0002;
@@ -147,11 +146,12 @@ public final class R {
         public static final int textView4=0x7f0b0015;
         public static final int textView5=0x7f0b0018;
         public static final int textView6=0x7f0b001b;
-        public static final int textView7=0x7f0b000e;
-        public static final int textView8=0x7f0b0010;
-        public static final int text_last_contact=0x7f0b000f;
-        public static final int text_next_contact=0x7f0b0011;
+        public static final int textView7=0x7f0b000d;
+        public static final int textView8=0x7f0b000f;
+        public static final int text_last_contact=0x7f0b000e;
+        public static final int text_next_contact=0x7f0b0010;
         public static final int text_toggle=0x7f0b0019;
+        public static final int time_button=0x7f0b0011;
         public static final int txt_category_name=0x7f0b0007;
         public static final int wheel_date=0x7f0b002c;
         public static final int wheel_month=0x7f0b002b;

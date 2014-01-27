@@ -14,20 +14,16 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
 import com.luperapp.Luper.Global.Constant;
 import com.luperapp.Luper.Global.Globals;
 import com.luperapp.model.AlarmReceiver;
 import com.luperapp.Luper.R;
-import com.luperapp.Luper.R.id;
-import com.luperapp.Luper.R.layout;
 import com.luperapp.model.AlarmItem;
 import com.luperapp.widget.MyDatePickerDialog;
-
+import com.luperapp.widget.MyTimePickerDialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -38,7 +34,6 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.Menu;
@@ -65,8 +60,8 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 	
 	private Button mSaveButton;
 	private ToggleButton mPhoneToggle, mEmailToggle, mTextToggle;
-	protected TextView mButtonLastContactDate;
-	protected TextView mButtonNextContactDate;
+	protected Button mButtonLastContactDate;
+	protected Button mButtonNextContactDate, mButtonTime;
 	private Button mButtonNotes;
 
 	
@@ -104,6 +99,7 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 		
 		mButtonLastContactDate = (Button) findViewById(R.id.text_last_contact);
 		mButtonNextContactDate = (Button) findViewById(R.id.text_next_contact);
+		mButtonTime = (Button) findViewById(R.id.time_button);
 
 		if(phone==null)
 			mContactBadge.assignContactFromPhone(phone, false);
@@ -122,6 +118,7 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 		mSaveButton.setOnClickListener(this);
 		mButtonLastContactDate.setOnClickListener(this);
 		mButtonNextContactDate.setOnClickListener(this);
+		mButtonTime.setOnClickListener(this);
 		
 		loadContactInfo();
 		
@@ -150,7 +147,8 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
  			mTextToggle.setChecked(me.isTextEnable());
  			mEmailToggle.setChecked(me.isEmailEnable());
  			mButtonLastContactDate.setText(me.getLastContactTime());
- 			mButtonNextContactDate.setText(me.getNextContactTime());			
+ 			mButtonNextContactDate.setText(me.getNextContactTime());
+ 			mButtonTime.setText(me.getTime());
  		}
  		else //me is new object
  		{
@@ -167,6 +165,7 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 		
 		me.setLastContactTime((String) mButtonLastContactDate.getText());
 		me.setNextContactTime((String) mButtonNextContactDate.getText());
+		me.setTime((String) mButtonTime.getText());
 		
 		scheduleReminder();
 		saveArray();
@@ -239,6 +238,10 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 				
 			case R.id.text_next_contact:
 				showDatePicker(mButtonNextContactDate.getText().toString(),FLAG_NEXT_APPOINT);
+				break;
+				
+			case R.id.time_button:
+				showTimePicker();
 				break;
 				
 		}
@@ -337,14 +340,22 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 		SimpleDateFormat sdf = new SimpleDateFormat(Constant.Profile.DATE_PATTERN);
 		try {
 			Date date_new = sdf.parse(this.mButtonNextContactDate.getText().toString());
+			sdf = new SimpleDateFormat(Constant.Profile.TIME_PATTERN);
+			Date time_new = sdf.parse(mButtonTime.getText().toString());
 			Calendar cal_new =  Calendar.getInstance();;
 			cal_new.setTime(date_new);
+			cal_new.set(Calendar.HOUR_OF_DAY, time_new.getHours());
+			cal_new.set(Calendar.MINUTE, time_new.getMinutes());
 			
 			
 			cal.set(Calendar.YEAR, cal_new.get(Calendar.YEAR));
 			cal.set(Calendar.MONTH, cal_new.get(Calendar.MONTH));
 			cal.set(Calendar.DATE, cal_new.get(Calendar.DATE));
+			cal.set(Calendar.HOUR_OF_DAY, cal_new.get(Calendar.HOUR_OF_DAY));
+			cal.set(Calendar.MINUTE, cal_new.get(Calendar.MINUTE));
 			cal.add(Calendar.SECOND, 5);
+			
+			Log.v("REMINDER SET FOR", cal.toString());
 			
 		} catch (ParseException e) {
 			
@@ -368,6 +379,13 @@ public class ContactDetailsActivity extends Activity implements OnClickListener 
 		
 		alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pendingIntent);
 
+	}
+	
+	public void showTimePicker() {
+		MyTimePickerDialog newFragment = new MyTimePickerDialog();
+		newFragment.setArguments(mButtonTime);
+	    newFragment.show(getFragmentManager(), "timePicker");
+	    
 	}
 	
 	

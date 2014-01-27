@@ -60,6 +60,7 @@ public class CategoryActivity extends Activity implements OnClickListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.categoryactivity);
+		
 		View okButton = findViewById(R.id.btn_back);
 		okButton.setOnClickListener(this);
 		initViews();

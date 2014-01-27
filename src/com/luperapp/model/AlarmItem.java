@@ -17,6 +17,7 @@ public class AlarmItem implements Serializable{
 	private String phone;
 	private String nextContactTime;
 	private String lastContactTime;
+	private String contactTime;
 	ArrayList<String> notes;
 	private boolean activate;
 	private boolean phoneEnable;
@@ -60,6 +61,14 @@ public class AlarmItem implements Serializable{
 	}
 	public void setNextContactTime(String nextContactTime) {
 		this.nextContactTime = nextContactTime;
+	}
+	public void setTime(String time)
+	{
+		contactTime = time;
+	}
+	public String getTime()
+	{
+		return contactTime;
 	}
 
 	public boolean isActivate() {
@@ -112,6 +121,7 @@ public class AlarmItem implements Serializable{
 		this.email = email;
 		this.period = period;
 		setId();
+		contactTime = "3:00 pm";
 	}
 	private void setId() {
 		int id = period*1000;
