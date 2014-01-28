@@ -1,7 +1,7 @@
 package com.luperapp.Luper;
-
+//
 /*
- *The AboutActivity displays the Luper icon and web address, and an OK button  
+comment *The AboutActivity displays the Luper icon and web address, and an OK button  
  */
 
 import android.app.Activity;
