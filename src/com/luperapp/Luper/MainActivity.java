@@ -59,6 +59,10 @@ public class MainActivity extends Activity implements OnClickListener{
 		yearlyButton.setOnClickListener(this);		
 		buttonList.add((Button) yearlyButton);
 		
+		View customButton = findViewById(R.id.BtnCustom);
+		customButton.setOnClickListener(this);		
+		buttonList.add((Button) customButton);
+		
 		showAlarmNumbers();
 		
 		//Add Animation

@@ -23,11 +23,13 @@
 	<color name="quarterly">#FF42AD21</color>
 	<color name="halfyear">#ffFF8200</color>
 	<color name="yearly">#ff871A5C</color>
-	<color name="contact">#5b3db7</color>
+	<color name="custom">#000770</color><color name="contact">#5b3db7</color>
 	<color name="half_transparent_weekly">#ccE30800</color>
 	<color name="half_transparent_monthly">#cc126ECC</color>
 	<color name="half_transparent_quarterly">#cc42AD21</color>
 	<color name="half_transparent_halfyear">#ccFF8200</color>
 	<color name="half_transparent_yearly">#cc871A5C</color>
 	<color name="half_transparent_contact">#cc5B3DB7</color>
+	
+	<color name="half_transparent_custom">#cc000770</color>
 </resources>

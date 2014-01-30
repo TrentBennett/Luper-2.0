@@ -106,5 +106,20 @@
 
     </Button>
     
+        <Button
+        android:id="@+id/BtnCustom"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginBottom="1dp"
+
+        android:text="@string/custom"
+        android:background="@drawable/custom_bkg"
+        android:tag="5"
+        android:textColor="#fff"
+        android:textSize="40sp" >
+
+    </Button>
 
 </LinearLayout>

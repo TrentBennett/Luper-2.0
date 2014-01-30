@@ -6,6 +6,7 @@
         <item>Quarterly</item>
         <item>6 Months</item>
         <item>Yearly</item>
+        <item >Custom</item>
    </string-array>
    
     <string-array name="category_color">
@@ -14,6 +15,7 @@
        <item>#FF42AD21</item>
        <item>#ffFF8200</item>
        <item>#ff871A5C</item>
+       <item >#000770</item>
     </string-array>
  
     <string-array name="action_click">
